@@ -1,0 +1,546 @@
+/* ==================== 1. VARIABLES & RESET ==================== */
+:root {
+  --green: #00a680;
+  --green-dark: #008465;
+  --dark: #1c2b2a;
+  --text: #3b4a49;
+  --gray: #f3f5f4;
+  --white: #ffffff;
+  --radius: 16px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 26px rgba(0, 0, 0, 0.14);
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* keeps headings visible below the sticky header */
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ==================== 2. LAYOUT HELPERS ==================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.section-gray {
+  background: var(--gray);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ==================== 3. BUTTONS ==================== */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-green {
+  background: var(--green);
+  color: var(--white);
+}
+
+.btn-green:hover {
+  background: var(--green-dark);
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.btn-dark:hover {
+  background: #000;
+}
+
+.btn-outline {
+  border-color: var(--green);
+  color: var(--green-dark);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: var(--white);
+}
+
+/* ==================== 4. HEADER / NAVIGATION ==================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--dark);
+}
+
+/* Simple CSS-only logo: a green circle with a white "location pin" dot */
+.logo-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.logo-icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 3px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--green-dark);
+  border-color: var(--green);
+}
+
+/* ==================== 5. HERO ==================== */
+.hero {
+  margin: 24px;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  border-radius: 28px;
+  color: var(--white);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=70")
+    center / cover no-repeat;
+  background-color: #2b5a52; /* shown if the image can't load */
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.search-box .btn {
+  padding: 14px 36px;
+  font-size: 1.1rem;
+}
+
+/* ==================== 6. CARDS (shared by all sections) ==================== */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #cfd8d6; /* placeholder colour while the image loads */
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card {
+  /* the image scales inside the card, so keep it clipped */
+  isolation: isolate;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  padding: 20px;
+  background: var(--white);
+}
+
+.card-body h3 {
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+.card-body .btn {
+  margin-top: auto; /* pushes the button to the bottom of every card */
+}
+
+.location,
+.meta {
+  font-size: 0.95rem;
+  color: #6a7b79;
+}
+
+.stars {
+  color: #f5a623;
+  letter-spacing: 2px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Things to Do cards */
+.activity-card img {
+  height: 160px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e2f5ef;
+  font-size: 1.4rem;
+}
+
+/* ==================== 7. TRAVEL INSPIRATION ==================== */
+.inspiration {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 48px;
+  border-radius: 28px;
+  background: #e2f5ef;
+}
+
+.inspiration-text h2 {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.inspiration-text p {
+  max-width: 46ch;
+  margin-bottom: 28px;
+}
+
+.inspiration-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.inspiration-images img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #cfd8d6;
+}
+
+.inspiration-images img:nth-child(2) {
+  margin-top: 32px; /* staggered look */
+}
+
+/* ==================== 8. FOOTER ==================== */
+.site-footer {
+  background: var(--dark);
+  color: #c5d1cf;
+  padding-top: 56px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+.site-footer h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.site-footer li {
+  margin-bottom: 8px;
+}
+
+.site-footer a {
+  transition: color var(--transition);
+}
+
+.site-footer a:hover {
+  color: var(--green);
+}
+
+.copyright {
+  margin-top: 40px;
+  padding: 20px 24px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ==================== 9. RESPONSIVE: TABLET ==================== */
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .inspiration {
+    grid-template-columns: 1fr;
+    padding: 36px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ==================== 10. RESPONSIVE: MOBILE ==================== */
+@media (max-width: 680px) {
+  /* Stack the header: logo + button on top, links below (no JavaScript menu needed) */
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  .hero {
+    margin: 12px;
+    min-height: 460px;
+    padding: 32px 16px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    border-radius: 20px;
+  }
+
+  .search-box input {
+    text-align: center;
+  }
+
+  .section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .inspiration {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .inspiration-text h2 {
+    font-size: 2rem;
+  }
+
+  .inspiration-images img {
+    height: 200px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

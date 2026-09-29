@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRIP FINDER | Discover Your Next Adventure</title>
+  <meta name="description" content="Find amazing places, hotels, restaurants and experiences.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">
+        <span class="logo-icon" aria-hidden="true"></span>
+        TRIP FINDER
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#explore">Explore</a></li>
+        <li><a href="#hotels">Hotels</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+        <li><a href="#things-to-do">Things to Do</a></li>
+      </ul>
+
+      <a href="#" class="btn btn-dark">Sign in</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Find amazing places, hotels, restaurants and experiences.</p>
+
+        <form class="search-box" action="#" method="get">
+          <label for="destination" class="visually-hidden">Where do you want to go?</label>
+          <input type="text" id="destination" name="destination" placeholder="Where do you want to go?">
+          <button type="submit" class="btn btn-green">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== EXPLORE SECTION ==================== -->
+    <section class="section container" id="explore">
+      <h2 class="section-title">Explore Popular Destinations</h2>
+
+      <div class="grid grid-4">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=70" alt="Eiffel Tower in Paris">
+          <div class="card-body">
+            <h3>Paris</h3>
+            <p>Art, cafés and the iconic Eiffel Tower along the Seine.</p>
+            <a href="#" class="btn btn-outline">Explore</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=70" alt="Dubai skyline at dusk">
+          <div class="card-body">
+            <h3>Dubai</h3>
+            <p>Record-breaking skyscrapers, desert safaris and luxury shopping.</p>
+            <a href="#" class="btn btn-outline">Explore</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=70" alt="Temple and rice fields in Bali">
+          <div class="card-body">
+            <h3>Bali</h3>
+            <p>Green rice terraces, quiet temples and beautiful beaches.</p>
+            <a href="#" class="btn btn-outline">Explore</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=800&q=70" alt="New York City skyline">
+          <div class="card-body">
+            <h3>New York</h3>
+            <p>Broadway shows, Central Park and a food scene that never sleeps.</p>
+            <a href="#" class="btn btn-outline">Explore</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== THINGS TO DO SECTION ==================== -->
+    <section class="section section-gray" id="things-to-do">
+      <div class="container">
+        <h2 class="section-title">Things to Do</h2>
+
+        <div class="grid grid-4">
+          <article class="card activity-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70" alt="Tropical beach with clear water">
+            <div class="card-body">
+              <span class="icon-circle" aria-hidden="true">🏖️</span>
+              <h3>Beaches</h3>
+              <p>Sun, sand and calm blue water.</p>
+            </div>
+          </article>
+
+          <article class="card activity-card">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=70" alt="Hiker on a mountain trail">
+            <div class="card-body">
+              <span class="icon-circle" aria-hidden="true">🥾</span>
+              <h3>Adventure</h3>
+              <p>Hikes, treks and outdoor thrills.</p>
+            </div>
+          </article>
+
+          <article class="card activity-card">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=70" alt="Historic monument at sunrise">
+            <div class="card-body">
+              <span class="icon-circle" aria-hidden="true">🏛️</span>
+              <h3>Cultural Places</h3>
+              <p>Museums, temples and old towns.</p>
+            </div>
+          </article>
+
+          <article class="card activity-card">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=70" alt="Shop interior with displayed products">
+            <div class="card-body">
+              <span class="icon-circle" aria-hidden="true">🛍️</span>
+              <h3>Shopping</h3>
+              <p>Local markets and modern malls.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HOTELS SECTION ==================== -->
+    <section class="section container" id="hotels">
+      <h2 class="section-title">Popular Hotels</h2>
+
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=70" alt="Resort hotel with a swimming pool">
+          <div class="card-body">
+            <h3>Azure Bay Resort</h3>
+            <p class="location">📍 Bali, Indonesia</p>
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <p>Beachfront villas with a private pool and sunset views.</p>
+            <a href="#" class="btn btn-green">View Hotel</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=70" alt="Elegant hotel exterior">
+          <div class="card-body">
+            <h3>Le Jardin Boutique</h3>
+            <p class="location">📍 Paris, France</p>
+            <p class="stars" aria-label="4 out of 5 stars">★★★★☆</p>
+            <p>A cozy hotel near the Seine with a quiet garden courtyard.</p>
+            <a href="#" class="btn btn-green">View Hotel</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=70" alt="Modern hotel room with a city view">
+          <div class="card-body">
+            <h3>Skyline Grand</h3>
+            <p class="location">📍 Dubai, UAE</p>
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <p>Spacious rooms high above the city with a rooftop lounge.</p>
+            <a href="#" class="btn btn-green">View Hotel</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== RESTAURANTS SECTION ==================== -->
+    <section class="section section-gray" id="restaurants">
+      <div class="container">
+        <h2 class="section-title">Top Restaurants</h2>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=70" alt="Restaurant dining room">
+            <div class="card-body">
+              <h3>La Maison Rouge</h3>
+              <p class="location">📍 Paris, France</p>
+              <p class="meta">French cuisine</p>
+              <p class="rating"><span class="badge">4.7</span> <span class="stars" aria-hidden="true">★★★★★</span></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=70" alt="Plated gourmet dish">
+            <div class="card-body">
+              <h3>Spice Route</h3>
+              <p class="location">📍 Dubai, UAE</p>
+              <p class="meta">Indian &amp; Middle Eastern</p>
+              <p class="rating"><span class="badge">4.5</span> <span class="stars" aria-hidden="true">★★★★☆</span></p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=70" alt="Cozy restaurant interior">
+            <div class="card-body">
+              <h3>Harbor &amp; Fork</h3>
+              <p class="location">📍 New York, USA</p>
+              <p class="meta">Seafood</p>
+              <p class="rating"><span class="badge">4.6</span> <span class="stars" aria-hidden="true">★★★★★</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRAVEL INSPIRATION SECTION ==================== -->
+    <section class="section container">
+      <div class="inspiration">
+        <div class="inspiration-text">
+          <h2>Travel More. Explore More.</h2>
+          <p>Every trip starts with a single search. Pick a place, find where to stay and eat, and plan the days in between.</p>
+          <a href="#explore" class="btn btn-green">Start Exploring</a>
+        </div>
+
+        <div class="inspiration-images">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=600&q=70" alt="Lake surrounded by mountains">
+          <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=70" alt="Traveler with a map and backpack">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>About Us</h3>
+        <p>Trip Finder helps travelers discover places to visit, stay and eat, all in one place.</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li>hello@tripfinder.example</li>
+          <li>+00 123 456 7890</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Trip Finder. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
